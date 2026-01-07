@@ -1,9 +1,10 @@
 import Button from "./components/Button";
+import Nav from "./components/Nav";
 
 const App = () => {
   return (
     <main className="">
-      <h1>Hey There</h1>
+      <Nav />
       <div className="space-x-2">
         <Button variant="primary" disabled>
           Submit
