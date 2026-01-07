@@ -1,0 +1,32 @@
+import { Moon, Sun } from "lucide-react";
+import Button from "./Button";
+import { useTheme } from "../provider/theme-provider";
+
+const Nav = () => {
+  const { setTheme, theme } = useTheme();
+
+  return (
+    <nav className="py-8 px-12 items-center flex justify-between">
+      <h1 className="font-bold">Neumorphism UI</h1>
+      <Button
+        onClick={() => {
+          if (theme === "light") {
+            setTheme("dark");
+          } else {
+            setTheme("light");
+          }
+        }}
+        shape={"circle"}
+        size={"icon"}
+      >
+        {theme === "light" ? (
+          <Sun className="h-[1.2rem] w-[1.2rem] text-warning scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+        ) : (
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+        )}
+      </Button>
+    </nav>
+  );
+};
+
+export default Nav;
