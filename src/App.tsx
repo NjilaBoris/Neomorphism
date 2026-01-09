@@ -7,6 +7,7 @@ import Card, {
   CardTitle,
 } from "./components/card";
 import Nav from "./components/Nav";
+import NeuSwitch from "./components/Switch";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <CardFooter>
             <Button variant={"primary"}>Purchase Now</Button>
           </CardFooter>
+          <NeuSwitch />
         </Card>
       </div>
     </main>
